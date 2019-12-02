@@ -56,7 +56,11 @@ const rootReducer = combineReducers({
 const initialState = {};
 
 //Create store
-const store = createStore(rootReducer, initialState);
+const store = createStore(
+  rootReducer, 
+  initialState, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
 // Create store
 /*
@@ -74,5 +78,6 @@ const rrfProps = {
   // createFirestoreInstance // <- needed if using firestore
 };
 */
+
 
 export default store;
