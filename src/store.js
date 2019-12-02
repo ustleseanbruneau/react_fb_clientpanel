@@ -25,19 +25,10 @@ var firebaseConfig = {
   measurementId: "G-96C9JD61ES"
 };
 
-// react-redux-firebase config
-/*
-const rrfConfig = {
-  userProfile: 'users',
-  useFirestoreForProfile: true  //Firestore for Profile instead of Realtime DB
-}
-*/
 
 //  Init Firebase instance
 firebase.initializeApp(firebaseConfig);
 
-//  Init firestore
-//const firestore = firebase.firestore();
 
 // Add reactReduxFirebase enhancer when making store creator
 /*
@@ -68,15 +59,6 @@ const store = createStoreWithFirebase(rootReducer, initialState, compose(
   reactReduxFirebase(firebase),
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 ));
-*/
-
-/*
-const rrfProps = {
-  firebase,
-  config: rrfConfig,
-  dispatch: store.dispatch,
-  // createFirestoreInstance // <- needed if using firestore
-};
 */
 
 
