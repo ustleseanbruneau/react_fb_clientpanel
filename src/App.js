@@ -14,6 +14,7 @@ import Dashboard from './components/layout/Dashboard'
 import AddClient from './components/clients/AddClient'
 import ClientDetails from './components/clients/ClientDetails'
 import EditClient from './components/clients/EditClient'
+import Login from './components/auth/Login'
 
 function App() {
 
@@ -22,7 +23,8 @@ function App() {
 
   // react-redux-firebase config
   const rrfConfig = {
-    userProfile: 'users',
+    //userProfile: 'users',
+    userProfile: null,
     useFirestoreForProfile: true  //Firestore for Profile instead of Realtime DB
   }
 
@@ -45,6 +47,7 @@ function App() {
                 <Route exact path="/client/add" component={AddClient} />
                 <Route exact path="/client/edit/:id" component={EditClient} />
                 <Route exact path="/client/:id" component={ClientDetails} />
+                <Route exact path="/login" component={Login} />
               </Switch>
             </div>
           </div>
